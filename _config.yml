@@ -1,0 +1,5 @@
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://hpc-ed.github.io/" # the base hostname & protocol for your site, e.g. https://example.com
+
+liquid:
+  error_mode: warn
