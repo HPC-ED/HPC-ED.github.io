@@ -65,7 +65,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="assets/imgs/HPC-ED-only.png" width="300px" alt="HPC-ED logo">
+        <img src="assets/imgs/HPC-ED.png" width="300px" alt="HPC-ED logo">
         <!-- <h1 class="display-3">HPC-ED</h1> -->
         <h2>Discover &amp; Share</h2>
 
@@ -76,7 +76,7 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-4">
           <h2>Project</h2>
           <p>Cybertraining materials abound, but they can be difficult to find, and
             often have little information about the quality or relevance of offerings.
@@ -100,19 +100,19 @@
             training materials to a much wider audience.</p>
 
         </div>
-        <div class="col-md-2">
+        <div class="col-md-4">
           <h2>Partners</h2>
 
           {% for org in site.data.partners.organization %}
 
           <div class='mb-3'>
-          <a class='mb-3' href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}" alt="{{ org.name }}"> </a>
+          <a class='mb-3 px-4' href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}" alt="{{ org.name }}"> </a>
           </div>
 
           {% endfor %}
 
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
           <h2>Community</h2>
           <p>To join the HPC ED Google Group and receive project updates, email <a
               href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a>.</p>
