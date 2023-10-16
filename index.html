@@ -65,9 +65,9 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <img src="assets/imgs/HPC-ED.png" width="300px" alt="HPC-ED logo">
+        <img src="/assets/imgs/HPC-ED.png" width="300px" alt="HPC-ED logo">
         <!-- <h1 class="display-3">HPC-ED</h1> -->
-        <h2>Discover &amp; Share</h2>
+        <!-- <h2>Discover &amp; Share</h2> -->
 
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
       </div>
@@ -105,8 +105,8 @@
 
           {% for org in site.data.partners.organization %}
 
-          <div class='mb-3'>
-          <a class='mb-3 px-4' href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}" alt="{{ org.name }}"> </a>
+          <div class='mb-3 ml-3 mr-3'>
+          <a href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}" alt="{{ org.name }}"> </a>
           </div>
 
           {% endfor %}
