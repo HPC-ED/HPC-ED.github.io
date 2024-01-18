@@ -9,26 +9,35 @@ layout: default
 
   {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Events" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+{%- if site.posts.size > 0 -%}
+<h2 class="post-list-heading">Recent Events</h2>
+<ul class="post-list">
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-  {%- endif -%}
+  {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+  {% for post in site.posts limit:6 %}
+  {% if post.hide == null or post.hide == false %}
+  {% capture date %}{{ post.dateofevent | date: '%s' | plus: 0 }}{% endcapture %}
+  {% if date < now %} <li>
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <h3>
+      {% if post.content.size <= 1 %} <a class="post-link" href="{{ post.eventurl }}">
+        {{ post.title | escape }}
+        </a>
+        {% else %}
+        <a class="post-link" href="{{ post.url }}">
+          {{ post.title | escape }}
+        </a>
+        {% endif %}
+    </h3>
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+    {%- endif -%}
+    </li>
+    {% endif %}
+    {% endif %}
+    {%- endfor -%}
+</ul>
+{%- endif -%}
 
 </div>

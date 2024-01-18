@@ -55,6 +55,7 @@ layout: home
 
           {% endfor %}
 
+
   </div>
   <div class="col-md-4">
     <h2>Community</h2>
@@ -66,14 +67,37 @@ layout: home
         href="https://support.access-ci.org/affinity-groups/hpc-ontologies-and-metadata">HPC Ontologies and
         Metadata</a> to build a set of standardized minimal HPC ontologies and metadata. </p>
 
-  <h3>Upcoming events:</h3>
+  <h3>Upcoming Events:</h3>
     <ul>
-      <li><a href="https://sc23.supercomputing.org/?post_type=page&p=3480&sess=sess456">Tenth SC Workshop on Best
-          Practices for HPC Training and Education</a></li>
-      <li>The <strong>FAIR HPC Training</strong> meeting will be held at the SC23 Conference on 11/13/2023 from
-        10am-noon in room 711.</li>
-      <li><em>HPC-ED Training Resources </em> will be presented at <a
-          href="https://hackhpc.github.io/facultyhack-gateways23/">FacultyHack@Gateway2023</a> on 10/18/2023</li>
+     {%- if site.posts.size > 0 -%}
+    
+      {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
+        {% for post in site.posts %}
+        {% if post.hide == null or post.hide == false %}
+    {% capture date %}{{ post.dateofevent | date: '%s' | plus: 0 }}{% endcapture %}
+    {% if date >= now %}
+      <li>
+        <strong>
+          {% if post.content.size <= 1 %}
+          <a href="{{ post.eventurl }}">
+            {{ post.title | escape }}
+          </a>
+          {% else %}
+            <a href="{{ post.url }}">
+            {{ post.title | escape }}
+          </a>
+          {% endif %}
+        </strong>
+        <br>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+      </li>
+      {% endif %}
+      {%- endif -%}
+      {%- endfor -%}
+{%- endif -%}
+      
+  
     </ul>
 
   </div>
@@ -93,6 +117,6 @@ layout: home
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-  <script src="../../assets/js/vendor/popper.min.js"></script>
-  <script src="../../dist/js/bootstrap.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>

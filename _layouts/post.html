@@ -8,7 +8,8 @@ layout: default
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+        {{ page.dateofevent | date: date_format }}
+
       </time>
 
    
@@ -49,21 +50,28 @@ layout: default
     <p>
 
       {% if page.presenters %}
-      <em> Presenters:</em>
-          {% for presenter in page.presenters %}
-             {% if forloop.last %}
-                {{ presenter }}
-             {% else %}
-             {{ presenter }},
-             {% endif %} 
-          {% endfor %}
+        <em> 
+          {% if page.presenters.size > 1 %}
+          Presenters:
+          {% else %}
+          Presenter:
+          {% endif %}
+        </em>
+
+        {% for presenter in page.presenters %}
+            {% if forloop.last %}
+              {{ presenter }}
+            {% else %}
+            {{ presenter }},
+            {% endif %} 
+        {% endfor %}
       {% endif %}
       </p>
       
       
       {% if page.image %}
       
-        <img src="/{{ page.image }}">
+        <img src="/{{ page.image }}" alt="{{ page.image_description }}" class="rounded mx-auto d-block">
         <br><br>
       {% endif %}
       
