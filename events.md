@@ -17,7 +17,7 @@ title: Events
     {% if date >= now %}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ post.dateofevent | date: date_format }}</span>
         <h3>
           {% if post.content.size <= 1 %}
           <a class="post-link" href="{{ post.eventurl }}">
@@ -52,7 +52,7 @@ title: Events
     {% if date < now %}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ post.dateofevent | date: date_format }}</span>
         <h3>
           {% if post.content.size <= 1 %}
           <a class="post-link" href="{{ post.eventurl }}">

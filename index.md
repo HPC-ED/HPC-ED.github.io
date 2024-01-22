@@ -90,7 +90,7 @@ layout: home
         </strong>
         <br>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">{{ post.dateofevent | date: date_format }}</span>
       </li>
       {% endif %}
       {%- endif -%}
