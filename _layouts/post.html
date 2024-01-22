@@ -1,0 +1,103 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.dateofevent | date: date_format }}
+
+      </time>
+
+   
+      
+
+      {%- if page.associated_event -%}
+
+        {%- if page.associated_event.size > 1 -%}
+        •  <a href="{{ page.associated_event[1]}}"> {{ page.associated_event[0] }}</a> 
+        {%- else -%}
+        •  {{ page.associated_event[0] }} 
+
+        {%- endif -%}
+      
+      {%- endif -%}
+
+      {%- if page.location -%}
+      &nbsp;[ <em> {{ page.location }} </em> ]
+      {%- endif -%}
+
+      {%- if page.author -%}
+        {%- if page.author.size == 1 -%}
+        <br> &nbsp;Author: <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+        {%- else -%}
+          <br> Authors:&nbsp;
+          {%- for author in page.author -%}
+          {% if forloop.last %}
+           <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}</span></span>
+          {% else %}
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ author }}, </span></span>
+          {% endif %}
+           {%- endfor -%}
+        {%- endif -%}
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>
+
+      {% if page.presenters %}
+        <em> 
+          {% if page.presenters.size > 1 %}
+          Presenters:
+          {% else %}
+          Presenter:
+          {% endif %}
+        </em>
+
+        {% for presenter in page.presenters %}
+            {% if forloop.last %}
+              {{ presenter }}
+            {% else %}
+            {{ presenter }},
+            {% endif %} 
+        {% endfor %}
+      {% endif %}
+      </p>
+      
+      
+      {% if page.image %}
+      
+        <img src="/{{ page.image }}" alt="{{ page.image_description }}" class="rounded mx-auto d-block">
+        <br><br>
+      {% endif %}
+      
+      
+      {% if page.abstract %}
+        <h3>Abstract</h3>
+      <p>
+        {{ page.abstract }}
+      </p>
+      {% endif %}
+      
+
+      {% if page.files %}
+          <em>Files:</em>
+          {% for file in page.files %}
+              <a href="{{ file | absolute_url }}">{{ file | split: "/" | last }}</a>
+          {% endfor %}
+      {% endif %}
+
+
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
