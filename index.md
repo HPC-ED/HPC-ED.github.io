@@ -66,6 +66,7 @@ title: Home
     <p>Join the ACCESS affinity group <a
         href="https://support.access-ci.org/affinity-groups/hpc-ontologies-and-metadata">HPC Ontologies and
         Metadata</a> to build a set of standardized minimal HPC ontologies and metadata. </p>
+    <p><a href="https://tinyurl.com/HPC-ED-Join">Let us know</a> if you want to be one of the first to try the new catalog tool we are developing.</p>
 
   <h3>Upcoming Events:</h3>
     <ul>
