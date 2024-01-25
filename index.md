@@ -44,6 +44,8 @@ title: Home
             training materials to a much wider audience.</p>
       </div>
         <div class="col-md-4">
+          <h2>Catalog Tools</h2><p><a
+              href="https://search-pilot.operations.access-ci.org/">HPC Training MetaData Pilot Tool</a> - <em>[Alpha]</em> Developer and tester browsing portal</p>
           <h2>Contact Us</h2><p><a
               href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a></p>
 
