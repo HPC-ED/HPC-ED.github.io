@@ -23,7 +23,7 @@ title: Home
           <h2>Project</h2>
           <p>Cybertraining materials abound, but they can be difficult to find, and
             often have little information about the quality or relevance of offerings.
-            Using existing software technology, the HPC ED Pilot project team will
+            Using existing software technology, the HPC-ED Pilot project team will
             build a platform for the community to better share and find training
             materials through a federated repository.</p>
           <ul>
@@ -67,7 +67,7 @@ title: Home
   </div>
   <div class="col-md-4">
     <h2>Community</h2>
-    <p>To join the HPC ED Google Group and receive project updates, email <a
+    <p> <strong><a href="https://groups.google.com/u/1/g/hpc-edu-train">HPC-ED Google Group</a></strong> - To join/check the HPC-ED Google Group for project updates, emails, and collaborative opportunities <a
         href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a>.</p>
     <p>To participate in the working group formed to discuss metadata standards for sharing materials, join the <a
         href="https://sighpceducation.acm.org/">ACM SIGHPC Education Chapter</a>.</p>
