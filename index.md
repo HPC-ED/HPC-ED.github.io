@@ -46,6 +46,12 @@ title: Home
         <div class="col-md-4">
           <h2>Catalog Tools</h2><p><a
               href="https://search-pilot.operations.access-ci.org/">HPC Training MetaData Pilot Tool</a> - <em>[Alpha]</em> Developer and tester browsing portal</p>
+
+          <h2>Catalog Guides</h2>
+
+            <p> <a href="https://github.com/HPC-ED/HPC-ED.github.io/wiki">Wiki</a> - Storehouse of documentation/guides supporting HPC-ED tools and events including Searching, Publishing, and Adding metadata using our API. </p>
+          
+
           <h2>Contact Us</h2><p><a
               href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a></p>
 
