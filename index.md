@@ -67,8 +67,7 @@ title: Home
   </div>
   <div class="col-md-4">
     <h2>Community</h2>
-    <p> <strong><a href="https://groups.google.com/u/1/g/hpc-edu-train">HPC-ED Google Group</a></strong> - To join/check the HPC-ED Google Group for project updates, emails, and collaborative opportunities <a
-        href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a>.</p>
+    <p> <strong><a href="https://groups.google.com/u/1/g/hpc-edu-train">HPC-ED Google Group</a></strong> - Join/check the HPC-ED Google Group for project updates, emails, and collaborative opportunities. </p>
     <p>To participate in the working group formed to discuss metadata standards for sharing materials, join the <a
         href="https://sighpceducation.acm.org/">ACM SIGHPC Education Chapter</a>.</p>
     <p>Join the ACCESS affinity group <a
