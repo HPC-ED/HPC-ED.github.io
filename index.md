@@ -77,7 +77,7 @@ title: Home
 
 
 
- <h3>Events:</h3> 
+ <h3>Events</h3> 
    
         
     <ul style="list-style: none; padding: 0; margin: 0;">
