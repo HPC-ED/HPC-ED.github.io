@@ -26,7 +26,7 @@ title: Events
       </div>
       <div>
         <h3>
-          {% if post.content.size <= 1 %} <a class="post-link" href="{{ post.eventurl }}">
+          {% if post.content.size <= 1 and post.abstract %} <a class="post-link" href="{{ post.eventurl }}">
             {{ post.title | escape }}
             </a>
             {% else %}
@@ -65,6 +65,13 @@ title: Events
             
           </strong>
           {% endif%}
+
+           {% if post.eventurl %}
+            <strong style="font-size: small;">
+          
+            <a href="{{ post.eventurl }}">Event URL</a>
+            </strong>
+          {% endif %}
             
           </p>
           <hr>
@@ -103,7 +110,7 @@ title: Events
       </div>
       <div>
         <h3>
-          {% if post.content.size <= 1 %} <a class="post-link" href="{{ post.eventurl }}">
+          {% if post.content.size <= 1 and post.abstract %} <a class="post-link" href="{{ post.eventurl }}">
             {{ post.title | escape }}
             </a>
             {% else %}
@@ -142,6 +149,7 @@ title: Events
             
           </strong>
           {% endif%}
+
 
           {% if post.eventurl %}
             <strong style="font-size: small;">

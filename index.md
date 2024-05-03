@@ -107,7 +107,7 @@ title: Home
    
       
         <strong>
-          {% if post.content.size <= 1 %}
+          {% if post.content.size <= 1 and post.abstract %}
           <a href="{{ post.eventurl }}">
             {{ post.title | escape }}
           </a>
@@ -136,7 +136,7 @@ title: Home
       <li>
         <strong>
       
-          {% if post.content.size <= 1 %}
+          {% if post.content.size <= 1 and post.abstract %}
           <a href="{{ post.eventurl }}">
             {{ post.title | escape }}
           </a>
