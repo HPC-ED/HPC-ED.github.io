@@ -4,25 +4,41 @@
 
 organization:
   - name: Cornell University Center for Advanced Computing
+    nickname: Cornell
     url: https://www.cac.cornell.edu/
     logo: assets/imgs/org_logos/Cornell_University_CAC-logo.svg
 
   - name: San Diego Supercomputer Center
+    nickname: SDSC
     url: https://www.sdsc.edu/
     logo: assets/imgs/org_logos/SDSClogo-plusname-red.svg
 
   - name: Kean University
+    nickname: Kean
     url: https://www.kean.edu/
     logo: assets/imgs/org_logos/kean_brand-2018.svg
 
   - name: University of Chicago
+    nickname: UChicago
     url: https://www.uchicago.edu/
     logo: assets/imgs/org_logos/UniversityofChicago-logo.svg
 
   - name: Argonne National Laboratory
+    nickname: ANL
     url: https://www.anl.gov/
     logo: assets/imgs/org_logos/Argonne-logo-blk.svg
 
   - name: Texas Advanced Computing Center
+    nickname: TACC
     url: https://www.tacc.utexas.edu/
     logo: assets/imgs/org_logos/TACC-bk.svg
+
+  - name: New Jersey Institute of Technology
+    nickname: NJIT
+    url: https://www.njit.edu
+    logo: assets/imgs/org_logos/New_Jersey_IT_logo.svg
+
+  - name: Ohio Supercomputer Center
+    nickname: OSC
+    url: https://www.osc.edu
+    logo: assets/imgs/org_logos/osc_logo.svg

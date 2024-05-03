@@ -1,0 +1,33 @@
+organizer:
+- name: "Richard Knepper"
+  affiliation: Cornell University Center for Advanced Computing
+  email: rich.knepper@cornell.edu
+  role: PI
+- name: "Kate Cahill"
+  affiliation: New Jersey Institute of Technology
+  email:
+- name: "Susan Mehringer"
+  affiliation: Cornell University Center for Advanced Computing
+  email: shm7@cornell.edu
+- name: "John-Paul Navarro"
+  affiliation: Argonne National Laboratory
+  email: navarro@mcs.anl.gov
+  role: Co-PI
+- name: "David Joiner"
+  affiliation: Kean University
+  email:
+  role: Co-PI
+- name: "Jeaime H. Powell"
+  affiliation: Texas Advanced Computing Center
+  email:
+  role: Co-PI
+- name: "Charlie Dey"
+  affiliation: Texas Advanced Computing Center
+  email:
+- name: "Mary P. Thomas"
+  affiliation: San Diego Supercomputer Center
+  email: mpthomas@ucsd.edu
+  role: Co-PI
+- name: "Brian Guilfoos"
+  affiliation: Ohio Supercomputer Center
+  email: guilfoos@osc.edu

@@ -75,17 +75,67 @@ title: Home
         Metadata</a> to build a set of standardized minimal HPC ontologies and metadata. </p>
     <p><a href="https://tinyurl.com/HPC-ED-Join">Let us know</a> if you want to be one of the first to try the new catalog tool we are developing.</p>
 
-  <h3>Upcoming Events:</h3>
-    <ul>
+
+
+ <h3>Events:</h3> 
+   
+        
+    <ul style="list-style: none; padding: 0; margin: 0;">
+    
      {%- if site.posts.size > 0 -%}
     
       {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
-        {% for post in site.posts %}
+        
+
+
+        {% assign reversedposts = site.posts | reverse %}
+        
+        {% for post in reversedposts %}
+            
+
+
+
+
         {% if post.hide == null or post.hide == false %}
     {% capture date %}{{ post.dateofevent | date: '%s' | plus: 0 }}{% endcapture %}
     {% if date >= now %}
+     <hr style="margin-bottom: 2px">
+        <i style="font-size: small">Upcoming Event:</i> 
+
+
+        <li style="list-style:none; list-style-position: inside;">
+   
+      
+        <strong>
+          {% if post.content.size <= 1 %}
+          <a href="{{ post.eventurl }}">
+            {{ post.title | escape }}
+          </a>
+          {% else %}
+            <a href="{{ post.url }}">
+            {{ post.title | escape }}
+          </a>
+          {% endif %}
+        </strong>
+        <br>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.dateofevent | date: date_format }}</span>
+      
+      </li>
+      {% endif %}
+      {%- endif -%}
+      {%- endfor -%}
+</ul>
+<hr>
+
+<ul>
+      {% for post in site.posts %}
+        {% if post.hide == null or post.hide == false %}
+    {% capture date %}{{ post.dateofevent | date: '%s' | plus: 0 }}{% endcapture %}
+    {% if date < now and forloop.index <= 3 %}
       <li>
         <strong>
+      
           {% if post.content.size <= 1 %}
           <a href="{{ post.eventurl }}">
             {{ post.title | escape }}
@@ -103,6 +153,11 @@ title: Home
       {% endif %}
       {%- endif -%}
       {%- endfor -%}
+
+
+
+
+
 {%- endif -%}
       
   
