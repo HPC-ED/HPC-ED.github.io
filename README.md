@@ -9,5 +9,5 @@ For further questions contact: <a href="mailto:hpc.edu.train@gmail.com?subject=Q
 
 <br>
 <hr>
-<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320379&HistoricalAwards=false"> NSF Award Link </a>
+<a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2320977&HistoricalAwards=false"> NSF Award Link </a>
 </p>
