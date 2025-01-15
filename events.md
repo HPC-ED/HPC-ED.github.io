@@ -9,7 +9,7 @@ title: Events
 {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">Upcoming Events</h2>
     <ul class="post-list">
-
+  
       {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
         {% for post in site.posts %}
         {% if post.hide == null or post.hide == false %}
