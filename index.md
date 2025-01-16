@@ -59,7 +59,7 @@ title: Home
 					browsing portal</p>
 
 				<h3>Guides</h3>
-				<p> <a href="https://github.com/HPC-ED/HPC-ED.github.io/wiki">Wiki</a> -
+				<p> <a href="https://github.com/HPC-ED/HPC-ED.github.io/wiki">Wiki Home</a> -
 					Storehouse of documentation/guides supporting HPC-ED tools and events
 					including Searching, Publishing, and Adding metadata using our API.
 				</p>
