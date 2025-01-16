@@ -10,12 +10,19 @@ title: Home
 ---
 <main role="main">
 
+	<div class="jumbotron">
+		<div class="container">
+			<img src="../assets/imgs/HPC-Ed.png" alt="HPC-ED logo"
+				class="rounded mx-auto d-block">
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
 				<h1>HPC-ED: Building a Federated Repository and Increasing Access
-					through Cybertraining</h1>
-				<p>Cybertraining materials abound, but they can be difficult to find,
+					through CyberTraining</h1>
+				<p>CyberTraining materials abound, but they can be difficult to find,
 					and
 					often have little information about the quality or relevance of
 					offerings.
@@ -44,9 +51,11 @@ title: Home
 					local
 					training materials to a much wider audience.</p>
 				<hr>
+
 				<h3>Catalog Tools</h3><p><a
-						href="https://search-pilot.operations.access-ci.org/">HPC Training
-						MetaData Pilot Tool</a> - <em>[Alpha]</em> Developer and tester
+						href="https://search-pilot.operations.access-ci.org/hpc-ed-v2/about/">HPC
+						Training
+						MetaData Pilot Tool</a>-<em>[Beta]</em> Developer and tester
 					browsing portal</p>
 
 				<h3>Guides</h3>
@@ -55,15 +64,15 @@ title: Home
 					including Searching, Publishing, and Adding metadata using our API.
 				</p>
 
-				<h2>Contact Us</h2><p><a
+				<h3>Contact Us</h3><p><a
 						href="mailto:hpc.edu.train@gmail.com">hpc.edu.train@gmail.com</a></p>
-				
+
 			</div>
 
 			<div class="col-md-4">
 				<h3>Community</h3>
 				<p> <strong><a href="https://groups.google.com/g/hpc-ed">HPC-ED Google
-							Group</a></strong> - Join/check the HPC-ED Google Group for
+							Group</a></strong> - Join the HPC-ED Google Group for
 					project updates, emails, and collaborative opportunities. </p>
 				<p>To participate in the working group formed to discuss metadata
 					standards for sharing materials, join the <a
@@ -80,7 +89,6 @@ title: Home
 
 				<hr>
 				<h3>Events</h3>
-
 				<ul style="list-style: none; padding: 0; margin: 0;">
 					{%- if site.posts.size > 0 -%}
 					{% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
@@ -109,7 +117,6 @@ title: Home
 						"%b %-d, %Y" -%}
 						<span class="post-meta">{{ post.dateofevent | date: date_format
 							}}</span>
-
 					</li>
 					{% endif %}
 					{%- endif -%}
@@ -146,41 +153,62 @@ title: Home
 					{%- endfor -%}
 
 					{%- endif -%}
-
 				</ul>
-
 			</div>
-
 		</div>
 
 		<hr>
 
 		<div class="row">
-		<div class="col-md-12">
-			<h2>Partners</h2>
-			<div class="row">
-				{% for org in site.data.partners.organization %}
-				<div class="col-md-4">
-					<a href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}" alt="{{ org.name }}"> </a>
+			<div class="col-md-12">
+				<h2>Partners</h2>
+				<div class="row">
+
+					{% assign sorted_orgs = site.data.partners.organization | sort: 'name' %}
+					{% for org in sorted_orgs %}
+					{% if org.name == "Cornell University Center for Advanced Computing" %}
+					<div class="col-md-4" style='padding-bottom: 40px; padding-top: 40px;'>
+						<a href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}"
+								alt="{{ org.name }}"> </a>
+					</div>
+					{% endif %}
+					{% endfor %}
+
+					{% assign last_full_row = sorted_orgs.size | divided_by: 3 | times: 3 %}
+					{% for org in sorted_orgs %}
+					{% unless forloop.index0 >= last_full_row %}
+					{% unless org.name == "Cornell University Center for Advanced Computing" %}
+					<div class="col-md-4" style='padding-bottom: 40px; padding-top: 40px;'>
+						<a href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}"
+								alt="{{ org.name }}"> </a>
+					</div>
+					{% endunless %}
+					{% endunless %}
+					{% endfor %}
+
+					{% assign row_mod = sorted_orgs.size | modulo: 3 %}
+					{% if row_mod == 1 %}
+					<div class="col-md-4"
+						style='padding-bottom: 40px; padding-top: 40px;'></div>
+					{% elsif row_mod == 2 %}
+					<div class="col-md-2"
+						style='padding-bottom: 40px; padding-top: 40px;'></div>
+					{% endif %}
+
+					{% for org in sorted_orgs %}
+					{% if forloop.index0 >= last_full_row %}
+					{% unless org.name == "Cornell University Center for Advanced Computing" %}
+					<div class="col-md-4" style='padding-bottom: 0px; padding-top: 40px;'>
+						<a href="{{ org.url }}"> <img class="organizations" src="{{ org.logo }}"
+								alt="{{ org.name }}"> </a>
+					</div>
+					{% endunless %}
+					{% endif %}
+					{% endfor %}
 				</div>
-				{% endfor %}
-			</div>
-		</div>
-		</div>
-		
-
-
-		<hr>
-		<div class="jumbotron">
-			<div class="container">
-				<img src="../assets/imgs/HPC-Ed.png" alt="HPC-ED logo"
-					class="rounded mx-auto d-block">
 			</div>
 		</div>
 	</div>
-
-	<!-- /container -->
-
 </main>
 
 <!-- Bootstrap core JavaScript ================================================== -->
