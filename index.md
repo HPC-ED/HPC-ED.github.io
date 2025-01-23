@@ -22,34 +22,18 @@ title: Home
 			<div class="col-md-8">
 				<h1>HPC-ED: Building a Federated Repository and Increasing Access
 					through CyberTraining</h1>
-				<p>CyberTraining materials abound, but they can be difficult to find,
-					and
-					often have little information about the quality or relevance of
-					offerings.
-					Using existing software technology, the HPC-ED Pilot project team will
-					build a platform for the community to better share and find training
-					materials through a federated repository.</p>
+				<p>CyberTraining materials abound, but they can be difficult to find and often have little information about the quality or relevance of offerings. HPC-ED is building a platform for the community to better share and find training materials through a federated repository.</p>
 				<ul>
-					<li>Organizations and authors will retain physical and legal ownership
-						of
-						their materials by sharing only catalog information.</li>
-					<li>Organizations can expand local portals to use the best and most
-						appropriate materials from both local and remote sources.</li>
-					<li>Learners can take advantage of materials that are reviewed and
-						described more clearly.</li>
-					<li>Learners and organizations will quickly and accurately find
-						materials
-						via standardized descriptive tagging.</li>
+					<li>Organizations and authors retain physical and legal ownership of their materials by sharing only catalog information.</li>
+					<li>Organizations can expand local portals to use the best and most appropriate materials from both local and remote sources.</li>
+					<li>Learners can take advantage of materials that are reviewed and described more clearly.</li>
+					<li>Learners and organizations will quickly and accurately find materials via standardized descriptive tagging.</li>
+					<li>Both Learners and Trainers will enjoy improved search based on relevance and quality of materials.</li>
 				</ul>
 				<p>
 					<a
-						href="https://www.cac.cornell.edu/about/pubs/HPC%20ED%20CyberTraining.pdf">The
-						pilot</a>
-					will demonstrate that resource providers, campus portals,
-					schools, and other institutions can both incorporate training from
-					multiple sources into their own familiar interface and publish their
-					local
-					training materials to a much wider audience.</p>
+						href="https://www.cac.cornell.edu/about/pubs/HPC%20ED%20CyberTraining.pdf">The HPC-ED pilot</a>
+					demonstrated that resource providers, campus portals, schools, and other institutions can both incorporate training from multiple sources into their own familiar interface and publish their local training materials to a much wider audience.</p>
 				<hr>
 
 				<h3>Catalog Tools</h3><p><a
