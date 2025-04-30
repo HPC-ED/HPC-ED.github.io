@@ -72,7 +72,7 @@ title: Home
 					developing.</p>
 
 				<hr>
-				<h3>Events</h3>
+				<h3>News/Events</h3>
 				<ul style="list-style: none; padding: 0; margin: 0;">
 					{%- if site.posts.size > 0 -%}
 					{% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
