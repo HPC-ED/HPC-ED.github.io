@@ -1,24 +1,26 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post h-entry" itemscope
+  itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title |
+      escape }}</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+        -%}
         {{ page.dateofevent | date: date_format }}
 
       </time>
 
-
-
-
       {%- if page.associated_event -%}
 
       {%- if page.associated_event.size > 1 -%}
-      • <a href="{{ page.associated_event[1]}}"> {{ page.associated_event[0] }}</a>
+      • <a href="{{ page.associated_event[1]}}"> {{ page.associated_event[0]
+        }}</a>
       {%- else -%}
       • {{ page.associated_event[0] }}
 
@@ -32,16 +34,20 @@ layout: default
 
       {%- if page.author -%}
       {%- if page.author.size == 1 -%}
-      <br> &nbsp;Author: <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span
-          class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      <br> &nbsp;Author: <span itemprop="author" itemscope
+        itemtype="http://schema.org/Person"><span
+          class="p-author h-card" itemprop="name">{{ page.author
+          }}</span></span>
       {%- else -%}
       <br> Authors:&nbsp;
       {%- for author in page.author -%}
       {% if forloop.last %}
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+      <span itemprop="author" itemscope
+        itemtype="http://schema.org/Person"><span class="p-author h-card"
           itemprop="name">{{ author }}</span></span>
       {% else %}
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+      <span itemprop="author" itemscope
+        itemtype="http://schema.org/Person"><span class="p-author h-card"
           itemprop="name">{{ author }}, </span></span>
       {% endif %}
       {%- endfor -%}
@@ -72,13 +78,12 @@ layout: default
       {% endif %}
     </p>
 
-
     {% if page.image %}
 
-    <img src="/{{ page.image }}" alt="{{ page.image_description }}" class="rounded mx-auto d-block">
+    <img src="/{{ page.image }}" alt="{{ page.image_description }}"
+      class="rounded mx-auto d-block">
     <br><br>
     {% endif %}
-
 
     {% if page.abstract %}
     <h3>Abstract</h3>
@@ -87,6 +92,11 @@ layout: default
     </p>
     {% endif %}
 
+    {% if page.categories contains "news" %}
+    <p>
+      Read it here: <a href="{{ page.newsurl }}">{{ page.newsurl }}</a>
+    </p>
+    {% endif %}
 
     {% if page.files %}
     <em>Files:</em>
@@ -94,7 +104,6 @@ layout: default
     <a href="{{ file | absolute_url }}">{{ file | split: "/" | last }}</a>
     {% endfor %}
     {% endif %}
-
 
     {{ content }}
   </div>

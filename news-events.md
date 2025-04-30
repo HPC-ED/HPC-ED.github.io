@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Events
+title: News/Events
 ---
 
 <div>
@@ -91,7 +91,7 @@ title: Events
 <hr>
 
 {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">Past Events</h2>
+    <h2 class="post-list-heading">News and Past Events</h2>
     <ul class="post-list">
 
      {% capture now %}{{'now' | date: '%s' | plus: 0 }}{% endcapture %}
@@ -110,7 +110,12 @@ title: Events
       </div>
       <div>
         <h3>
-          {% if post.content.size <= 1 and post.abstract %} <a class="post-link" href="{{ post.eventurl }}">
+        {% if post.categories contains "news" %}
+        <a class="post-link" href="{{ post.newsurl }}">
+            {{ post.title | escape }}
+        </a>
+        {% elsif post.content.size <= 1 and post.abstract %}
+            <a class="post-link" href="{{ post.url }}">
             {{ post.title | escape }}
             </a>
             {% else %}
