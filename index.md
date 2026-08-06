@@ -37,7 +37,7 @@ title: Home
 				<hr>
 
 				<h3>Catalog Tools</h3><p><a
-						href="https://search-pilot.operations.access-ci.org/hpc-ed-v2/about/">HPC
+						href="https://search-pilot.operations.access-ci.org/hpc-ed-v2/">HPC
 						Training
 						MetaData Pilot Tool</a>-<em>[Beta]</em> Developer and tester
 					browsing portal</p>
